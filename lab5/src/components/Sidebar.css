@@ -1,6 +1,6 @@
 .filter {
     background-color: white;
-    width: 250px;
+    width: 200px;
     height: 300px;
     padding-left: 15px;
     padding-top: 5px;
@@ -13,12 +13,12 @@
     
   }
 .textbox{
-    padding-left: 40px;
+    padding-left: 20px;
 }
 
 .srchbtn{
     margin-top: 10px;
-    margin-left: 80px;
+    margin-left: 60px;
 }
 
 .container{

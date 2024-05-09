@@ -24,18 +24,42 @@ const Article = () => {
 
   return (
     <div className="posts">
-      {articles.map((article, index) => (
-        <div className="post" key={index}>
-          <div className="articleHeader">
-            <div className="articleTitle">{index + 1} {article.title}</div>
-            <div className="articleDate">{article.published_date}</div>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', marginLeft: '10px', marginRight: '10px' }}>
-            <div className="articleImg"><img src={article.media[0]?.['media-metadata'][0]?.url} alt="Article Image" /></div>
-            <div className="articleAbstract">{article.abstract}</div>
-          </div>
-        </div>
-      ))}
+      <div className="left">
+        {articles.map((article, index) => {
+          if (index % 2 === 0) {
+            return (
+              <div className="post" key={index}>
+                <div className="articleHeader">
+                  <div className="articleTitle">{index + 1} {article.title}</div>
+                  <div className="articleDate">{article.published_date}</div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', marginLeft: '10px', marginRight: '10px' }}>
+                  <div className="articleImg"><img src={article.media[0]?.['media-metadata'][0]?.url} alt="Article Image" /></div>
+                  <div className="articleAbstract">{article.abstract}</div>
+                </div>
+              </div>
+            );
+            }
+        })}
+      </div>
+      <div className="right">
+        {articles.map((article, index) => {
+          if (index % 2 !== 0) {
+            return (
+              <div className="post" key={index}>
+                <div className="articleHeader">
+                  <div className="articleTitle">{index + 1} {article.title}</div>
+                  <div className="articleDate">{article.published_date}</div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', marginLeft: '10px', marginRight: '10px' }}>
+                  <div className="articleImg"><img src={article.media[0]?.['media-metadata'][0]?.url} alt="Article Image" /></div>
+                  <div className="articleAbstract">{article.abstract}</div>
+                </div>
+              </div>
+            );
+          } 
+        })}
+      </div>
     </div>
   );
 };

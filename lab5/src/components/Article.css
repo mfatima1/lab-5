@@ -1,16 +1,17 @@
 
 .post {
     background-color: rgb(190, 190, 190);
-    width: 600px;
+    width: 550px;
     height: 125px;
     border-radius: 10px;
-    margin-left: 50px;
+    margin-left: 35px;
     margin-bottom: 15px;
   }
   
   .posts {
     margin-top: 45px;
     flex: 1;
+    display: flex;
   }
   
   .articleTitle {
