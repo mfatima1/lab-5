@@ -1,7 +1,14 @@
 .App-header {
-  padding-top: 50px;
   background-color: rgba(21, 18, 18, 0.906);
-  min-height: 100vh;
-
+ 
 }
 
+.App{
+  
+  background-color: rgba(21, 18, 18, 0.906);
+}
+
+.content{
+  display: flex;
+  gap: 40px;
+}

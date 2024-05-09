@@ -10,6 +10,7 @@
     padding-bottom: 20px;
     padding-top: 20px;
     
+    
   }
 .textbox{
     padding-left: 40px;
@@ -18,4 +19,8 @@
 .srchbtn{
     margin-top: 10px;
     margin-left: 80px;
+}
+
+.container{
+    padding-top: 80px;
 }
