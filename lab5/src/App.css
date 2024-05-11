@@ -1,14 +1,9 @@
 .App-header {
   background-color: rgba(21, 18, 18, 0.906);
- 
 }
 
-.App{
-  
-  background-color: rgba(21, 18, 18, 0.906);
-}
 
-.content{
-  display: flex;
-  
+.App {
+  display:flex;
+  justify-content: center;
 }
