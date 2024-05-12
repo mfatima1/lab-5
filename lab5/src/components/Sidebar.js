@@ -1,4 +1,3 @@
-// Sidebar.js
 import React from "react";
 
 export const Sidebar = ({

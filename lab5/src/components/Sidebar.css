@@ -3,11 +3,9 @@
     width: fit-content;
     padding: 20px;
     border-radius: 10px;
-    flex: none; /* Do not grow or shrink */
     margin-left: 20px;
-    
-    
   }
+
 .textbox{
     display: flex;
     flex-direction: column;
