@@ -8,7 +8,7 @@ const Article = () => {
 
   useEffect(() => {
     fetchData();
-  }, [sortBy, timeFrame]); // Depend on sortBy and timeFrame
+  }, [sortBy, timeFrame]);
 
   const onSortByChange = (e) => {
     setSortBy(e.target.value);
@@ -19,10 +19,6 @@ const Article = () => {
   };
 
   const fetchData = () => {
-    const sortBy =
-      document.querySelector('input[name="sortBy"]:checked')?.value || "viewed";
-    const timeFrame =
-      document.querySelector('input[name="timeFrame"]:checked')?.value || "1";
     const url = `https://api.nytimes.com/svc/mostpopular/v2/${sortBy}/${timeFrame}.json?api-key=hq8UvsE7d5E45IbmtT2XKu8jkpDHV31t`;
 
     fetch(url)
