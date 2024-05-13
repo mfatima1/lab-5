@@ -49,3 +49,8 @@
 .articlesGrid {
   margin-top: 45px;
 }
+
+.pagination {
+  margin: auto;
+  width: 65%;
+}
