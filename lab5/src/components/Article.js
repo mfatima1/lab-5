@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Sidebar } from "./Sidebar";
-
+import Title  from "./Title";
 const Article = () => {
   const [articles, setArticles] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -42,6 +42,7 @@ const Article = () => {
     <div>
       <div style={{ display: "flex" }}>
         <div className="left">
+          <Title sortBy={sortBy} timeFrame={timeFrame} />
           <Sidebar
             sortBy={sortBy}
             timeFrame={timeFrame}
@@ -65,6 +66,7 @@ const Article = () => {
                   {article.title}
                 </div>
                 <div className="articleDate">{article.published_date}</div>
+
               </div>
               <div
                 style={{
