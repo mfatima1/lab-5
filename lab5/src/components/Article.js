@@ -40,7 +40,7 @@ const Article = () => {
 
   return (
     <div>
-      <div style={{ display: "flex" }}>
+      <div className="container" style={{ display: "flex" }}>
         <div className="left">
           <Title sortBy={sortBy} timeFrame={timeFrame} />
           <Sidebar
