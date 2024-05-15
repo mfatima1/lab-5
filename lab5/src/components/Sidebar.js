@@ -19,7 +19,7 @@ export const Sidebar = ({
         parsedSearch < 1 ||
         parsedSearch > 15
       ) {
-        alert("WRONG SEARCH: Please enter a valid integer between 1 and 15.");
+        alert("Please enter a number between 1 and 15.");
         return;
       }
       setSearchValue(parsedSearch);
