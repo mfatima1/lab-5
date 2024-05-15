@@ -1,21 +1,51 @@
-import React from "react";
-import Title  from "./Title";
+import React, { useState } from "react";
 export const Sidebar = ({
   sortBy,
   timeFrame,
   onSortByChange,
   onTimeFrameChange,
+  setSearchValue,
+  searchValue,
+  setShowSearchValue,
 }) => {
+  const [currentSearch, setCurrentSearch] = useState("");
+  const handleSearch = (event) => {
+    event.preventDefault();
+    try {
+      const parsedSearch = parseInt(currentSearch, 10);
+      if (
+        isNaN(parsedSearch) ||
+        !Number.isInteger(parsedSearch) ||
+        parsedSearch < 1 ||
+        parsedSearch > 15
+      ) {
+        alert("WRONG SEARCH: Please enter a valid integer between 1 and 15.");
+        return;
+      }
+      setSearchValue(parsedSearch);
+      setShowSearchValue(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="container">
       <div className="filter">
         <form>
           <div className="textbox">
             <label>
-              <input type="textbox" placeholder="Enter a value 1-15"></input>
+              <input
+                type="textbox"
+                placeholder="Enter a value 1-15"
+                onChange={(event) => setCurrentSearch(event.target.value)}
+                input={currentSearch}
+              ></input>
             </label>
             <br />
-            <button className="srchbtn">Search</button>
+            <button onClick={handleSearch} className="srchbtn">
+              Search
+            </button>
           </div>
           <h4>Sort By:</h4>
           <label>
